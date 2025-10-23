@@ -43,10 +43,10 @@ def gen_training_samples(n, k, m, num_samples, patience = 2048):
 def gen_training_data_set():
     n = 9
     k_list = [4,5,6]
-    num_samples = 10000
+    num_samples = 200000
 
-    data_n_k_m_G_datapath = f"../data/project/training_samples_n_k_m_G.pkl"
-    data_m_h_datapath = f"../data/project/training_samples_m_h.pkl"
+    data_n_k_m_G_datapath = f"../data/project/training_samples_extended_n_k_m_G.pkl"
+    data_m_h_datapath = f"../data/project/training_samples_extended_m_h.pkl"
 
     total_samples_n_k_m_G = []
     total_samples_m_h = []
@@ -90,7 +90,6 @@ def gen_test_data_set():
             total_samples_m_h.extend(m_h_samples)
 
     save_data(data_n_k_m_G_datapath, data_m_h_datapath, total_samples_n_k_m_G, total_samples_m_h)
-
 
 if __name__ == "__main__":
     # gen_test_data_set()
